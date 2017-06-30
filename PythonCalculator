@@ -1,0 +1,81 @@
+def calculator():
+    while True:
+        values = raw_input("What do you wanna do? Add? Subtract? Multiply? or Divide?: ").lower()
+
+        if values == "quit":
+            print "Thanks for using this calculator"
+            print "__________Goodbye__________"
+            break
+			
+        elif values == "add":
+            try:
+                first_value = int(raw_input("Input your first value here: "))
+                second_value = int(raw_input("Input your second value here: "))
+                print "%d + %d = %d" % (first_value, second_value, first_value + second_value)
+            except TypeError:
+                print "Please enter an integer"
+                print "Retrying......"
+            except ValueError:
+                print "All must be integer"
+                print "Retrying......"
+            except Exception:
+                print "Oops! Something went wrong!"
+                print "Retrying......."
+        			
+        elif values == "minus":
+            try:
+                first_value = int(raw_input("Input your first value here: "))
+                second_value = int(raw_input("Input your second value here: "))
+                print "%d - %d = %d" % (first_value, second_value, first_value - second_value)
+            except TypeError:
+                print "Please enter an integer"
+                print "Retrying......"
+            except ValueError:
+                print "All must be integer"
+                print "Retrying......"
+            except Exception:
+                print "Oops! Something went wrong!"
+                print "Retrying......."	
+
+        elif values == "divide":
+            try:
+                first_value = int(raw_input("Input your first value here: "))
+                second_value = int(raw_input("Input your second value here: "))
+                print "%d / %d = %d remainder %d" % (first_value, second_value, first_value / second_value, first_value % second_value)
+				
+            except TypeError:
+                print "Please enter an integer"
+                print "Retrying......"
+				
+            except ValueError:
+                print "All must be integer"
+                print "Retrying......"
+				
+            except ZeroDivisionError:
+                print "Do not divide an integer by zero"
+                print "Try again"
+				
+            except Exception:
+                print "Oops! Something went wrong!"
+                print "Retrying......."	
+
+        elif values == "multiply":
+            try:
+                first_value = int(raw_input("Input your first value here: "))
+                second_value = int(raw_input("Input your second value here: "))
+                print "%d * %d = %d" % (first_value, second_value, first_value * second_value)
+            except TypeError:
+                print "Please enter an integer"
+                print "Retrying......"
+            except ValueError:
+                print "All must be integer"
+                print "Retrying......"
+            except Exception:
+                print "Oops! Something went wrong!"
+                print "Retrying......."	
+				
+        else:
+            print "Try again later"
+
+
+calculator()
