@@ -2,12 +2,12 @@ def calculator():
     while True:
         values = raw_input("What do you wanna do? Add? Subtract? Multiply? or Divide?: ").lower()
 
-        if values == "quit":
+        if values == "quit" or values == "exit":
             print "Thanks for using this calculator"
             print "__________Goodbye__________"
             break
 			
-        elif values == "add":
+        elif values == "add" or values == "+":
             try:
                 first_value = int(raw_input("Input your first value here: "))
                 second_value = int(raw_input("Input your second value here: "))
@@ -22,7 +22,7 @@ def calculator():
                 print "Oops! Something went wrong!"
                 print "Retrying......."
         			
-        elif values == "minus":
+        elif values == "minus" or values == "-":
             try:
                 first_value = int(raw_input("Input your first value here: "))
                 second_value = int(raw_input("Input your second value here: "))
@@ -35,9 +35,9 @@ def calculator():
                 print "Retrying......"
             except Exception:
                 print "Oops! Something went wrong!"
-                print "Retrying........"	
+                print "Retrying......."	
 
-        elif values == "divide":
+        elif values == "divide" or values == "/":
             try:
                 first_value = int(raw_input("Input your first value here: "))
                 second_value = int(raw_input("Input your second value here: "))
@@ -59,7 +59,7 @@ def calculator():
                 print "Oops! Something went wrong!"
                 print "Retrying......."	
 
-        elif values == "multiply":
+        elif values == "multiply" or values == "*":
             try:
                 first_value = int(raw_input("Input your first value here: "))
                 second_value = int(raw_input("Input your second value here: "))
